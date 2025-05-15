@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../Layout/headSection') %>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand mx-auto d-flex align-items-center gap-2 text-white" href="/">
+                <img src="../image/AL-BARKZAKH-EXORT.png" alt="Logo"
+                    style="height: 50px; width: 50px; border-radius: 50%; object-fit: cover;">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/services">Services</a>
+                    </li>
+                </ul>
+            </div>
+            <span class="social-icons d-flex gap-3 justify-content-center align-items-center">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+            </span>
+        </div>
+    </nav>
+    <div class="hero-banner d-flex align-items-center justify-content-center text-white">
+        <h1 class="fw-bold">Contact Us</h1>
+    </div>
+    <div class="container py-5">
+        <h2 class="text-center mb-4"><span class="highlight">Contact</span> Al Barkzakh Export</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <form action="/contact" method="POST">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h4 class="mt-4 text-primary">Contact Information</h4>
+                <p>
+                    <i class="fas fa-map-marker-alt me-2"></i>
+                    Industry Area, Nagpur, MH - 440016
+                </p>
+                <p>
+                    <i class="fas fa-phone me-2"></i>
+                    +91 77200 50066
+                </p>
+                <p>
+                    <i class="fas fa-envelope me-2"></i>
+                    <a href="mailto:" class="text-decoration-none"></a>
+                    <a href="https://goo.gl/maps/your-location" target="_blank">Your Address</a>
+                </p>
+          
+                <h4>Location</h4>
+                <div id="map" style="height: 300px;"></div>
+                <script>
+                    function initMap() {
+                        var location = { lat: -25.363, lng: 131.044 }; // Replace with your coordinates
+                        var map = new google.maps.Map(document.getElementById('map'), {
+                            zoom: 4,
+                            center: location
+                        });
+                        var marker = new google.maps.Marker({
+                            position: location,
+                            map: map
+                        });
+                    }
+                </script>
+                <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?key
+                    =YOUR_API_KEY&callback=initMap">
+                </script>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container text-md-left">
+      <div class="row text-md-left">
+        
+        <!-- Company Info -->
+        <div class="col-md-4">
+          <h5 class="text-uppercase fw-bold mb-3">AL BARKZAKH EXPORT</h5>
+          <p>
+            Al Barkzakh Export is committed to delivering the finest Indian cereals and pulses globally. We maintain the highest standards in quality and customer satisfaction.
+          </p>
+        </div>
+  
+        <!-- Links -->
+        <div class="col-md-4">
+          <h5 class="text-uppercase fw-bold mb-3">Information</h5>
+          <ul class="list-unstyled">
+            <li><a href="/about" class="text-white text-decoration-none">About</a></li>
+            <li><a href="/import" class="text-white text-decoration-none">Import</a></li>
+            <li><a href="/export" class="text-white text-decoration-none">Export</a></li>
+            <li><a href="/events" class="text-white text-decoration-none">Recent Event</a></li>
+            <li><a href="/gallery" class="text-white text-decoration-none">Gallery</a></li>
+            <li><a href="/contact" class="text-white text-decoration-none">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class=" col-md-4">
+        <h5 class="text-uppercase">
+            <input type="email" placeholder="your Email Address" class="form-control">
+            <button type="submit" class="btn btn-primary mt-2">Subscribe</button>
+        </h5>
+        </div>
+  
+        <!-- Contact Info -->
+        <div class="col-md-4">
+          <h5 class="text-uppercase fw-bold mb-3">Address Info</h5>
+          <p><i class="fas fa-map-marker-alt me-2"></i>Industry Area, Nagpur, MH - 440016</p>
+          <p><i class="fas fa-phone me-2"></i>+91 77200 50066</p>
+          <p><i class="fas fa-envelope me-2"></i>info@albarkzakhexport.com</p>
+        </div>
+
+                <div class=""col-md-4">
+                <h5 class="text-uppercase fw-bold mb-3">Follow Us</h5>
+                <p>
+                    <a href="https://www.facebook.com/your-page" target="_blank">Facebook</a> |
+                    <a href="https://www.instagram.com/your-page" target="_blank">Instagram</a> |
+                    <a href="https://wa.me/your-number" target="_blank">WhatsApp</a>
+                </p>
+            </div>
+
+
+
+
+            
+
+
+  
+      </div>
+    </div>
+    </footer>
+       <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
+                
+                        
+
+        
